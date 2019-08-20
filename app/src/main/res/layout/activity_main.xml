@@ -7,6 +7,7 @@
         tools:context=".gameoflife.GameOfLifeActivity">
 
     <samuel.exercise.homequiz.view.CellGridView
+            android:id="@+id/grid_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
