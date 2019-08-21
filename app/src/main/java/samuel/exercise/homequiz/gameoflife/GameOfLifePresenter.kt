@@ -59,6 +59,12 @@ class GameOfLifePresenter(private val view: GameOfLifeContract.View) : GameOfLif
         view.updateLiveCells(liveCellSet.toSet())
     }
 
+    override fun clearAll() {
+        Log.d(TAG, "clearAll")
+        liveCellSet.clear()
+        view.updateLiveCells(liveCellSet.toSet())
+    }
+
     private fun transitCellState(cellSet: Set<Int>): Set<Int> {
         val nextSet = hashSetOf<Int>()
 

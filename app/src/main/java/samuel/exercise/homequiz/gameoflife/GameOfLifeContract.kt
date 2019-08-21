@@ -17,6 +17,8 @@ interface GameOfLifeContract {
         fun pauseTransition()
 
         fun addLiveCell(cellIndex: Int)
+
+        fun clearAll()
     }
 
     companion object {

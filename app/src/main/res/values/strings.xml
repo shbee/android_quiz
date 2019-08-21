@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Home Quiz</string>
     <string name="tick">Tick</string>
+    <string name="clear">Clear</string>
 </resources>

@@ -2,6 +2,7 @@ package samuel.exercise.homequiz.gameoflife
 
 import android.os.Bundle
 import android.view.MotionEvent
+import android.widget.Button
 import android.widget.CompoundButton
 import android.widget.Switch
 import androidx.appcompat.app.AppCompatActivity
@@ -24,7 +25,10 @@ class GameOfLifeActivity : AppCompatActivity(), GameOfLifeContract.View,
             cellTouchListener = this@GameOfLifeActivity
         }
         tickSwitch = findViewById<Switch>(R.id.tick_switch).apply {
-            this.setOnCheckedChangeListener(this@GameOfLifeActivity)
+            setOnCheckedChangeListener(this@GameOfLifeActivity)
+        }
+        findViewById<Button>(R.id.clear_button).apply {
+            setOnClickListener { presenter.clearAll() }
         }
         presenter = GameOfLifePresenter(this)
         onCheckedChanged(tickSwitch, tickSwitch.isChecked)

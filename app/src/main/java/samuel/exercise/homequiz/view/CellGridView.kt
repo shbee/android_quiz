@@ -30,7 +30,7 @@ class CellGridView : View {
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
 
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
-        liveCellPaint = Paint().apply { color = ContextCompat.getColor(context, R.color.colorAccent) }
+        liveCellPaint = Paint().apply { color = ContextCompat.getColor(context, R.color.colorLiveCell) }
         deadCellPaint = Paint().apply { color = Color.WHITE }
     }
 
