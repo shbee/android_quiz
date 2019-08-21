@@ -110,7 +110,7 @@ class CellGridView : View {
         return getCellIndex(dx, dy)
     }
 
-    private fun getCellIndex(dx: Int, dy: Int) = dy * dimenSizeY + dx
+    private fun getCellIndex(dx: Int, dy: Int) = dy * dimenSizeX + dx
 
     private fun onCellTouch(event: MotionEvent, cellIndex: Int) {
         Log.d(TAG, "onCellTouch, ${event.actionMasked}, index=$cellIndex")

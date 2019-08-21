@@ -20,8 +20,9 @@ interface GameOfLifeContract {
     }
 
     companion object {
-        const val DIMEN_SIZE_X = 7
-        const val DIMEN_SIZE_Y = 7
+        const val DIMEN_SIZE_X = 100
+        const val DIMEN_SIZE_Y = 130
+        const val TICK_INTERVAL_MS = 500L
     }
 
 }
