@@ -5,9 +5,19 @@ import samuel.exercise.homequiz.BaseView
 
 interface GameOfLifeContract {
 
-    interface View : BaseView<Presenter>
+    interface View : BaseView<Presenter> {
 
-    interface Presenter : BasePresenter
+        fun updateLiveCells(cellSet: Set<Int>)
+    }
+
+    interface Presenter : BasePresenter {
+
+        fun resumeTransition()
+
+        fun pauseTransition()
+
+        fun addLiveCell(cellIndex: Int)
+    }
 
     companion object {
         const val DIMEN_SIZE_X = 7

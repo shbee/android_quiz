@@ -40,11 +40,9 @@ class CellGridView : View {
         invalidate()
     }
 
-    fun setLiveCells(list: List<Int>) {
+    fun setLiveCells(set: Set<Int>) {
         liveCellSet.clear()
-        for (cellIndex in list) {
-            liveCellSet.add(cellIndex)
-        }
+        liveCellSet.addAll(set)
         invalidate()
     }
 
